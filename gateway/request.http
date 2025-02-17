@@ -1,0 +1,70 @@
+### Bookshops ###
+GET http://localhost:8080/api/bookshops
+
+
+###
+POST http://localhost:8080/api/bookshops
+Content-Type: application/json
+
+{
+  "nazwa": "Bookshop A",
+  "liczbaPracownikow": 5
+}
+
+###
+POST http://localhost:8080/api/bookshops
+Content-Type: application/json
+
+{
+  "nazwa": "Bookshop W",
+  "liczbaPracownikow": 20
+}
+###
+PUT http://localhost:8080/api/bookshops/c55d207a-7e71-422c-8149-09a47b0b80e4
+Content-Type: application/json
+
+{
+  "nazwa": "Another Bookshop Name",
+  "liczbaPracownikow": 20
+}
+
+###
+DELETE http://localhost:8080/api/bookshops/5cca51cc-f485-44e2-a67c-6c747adb338b
+### Books ###
+
+###
+GET http://localhost:8080/api/books
+
+###
+POST http://localhost:8080/api/books
+Content-Type: application/json
+
+{
+  "nazwa": "Book ",
+  "rok_wydania": 2023,
+  "bookshopId": "870ddd5f-4a76-4251-803c-337c452119e8"
+}
+
+###
+POST http://localhost:8080/api/books
+Content-Type: application/json
+
+{
+  "nazwa": "AAAAA",
+  "rok_wydania": 2025,
+  "bookshopId": "c55d207a-7e71-422c-8149-09a47b0b80e4"
+}
+
+###
+PUT http://localhost:8080/api/books/2de78d53-45b6-4276-897a-0f356d4f078f
+Content-Type: application/json
+
+{
+  "nazwa": "Updated Book Title",
+  "rok_wydania": 2023,
+  "bookshopId": "6a74675f-60e9-48fb-8495-5e49268f4371"
+ 
+}
+
+###
+DELETE http://localhost:8080/api/books/44d7b365-78a6-4a79-851d-5ad7c1a2ea90
