@@ -1,0 +1,49 @@
+<!--<p>book-form works!</p>-->
+<!--
+    id?:string;
+   nazwa?:string;
+   rok_wydania?: number;
+   ksiegarnia?: Bookshop;
+-->
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #bookForm="ngForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" [(ngModel)]="book.nazwa" 
+            class="form-control" 
+            id="name" 
+            name="name" 
+            placeholder="Enter books title"
+            required #nazwa="ngModel">
+        </div>
+        <div [hidden]="!nazwa.pristine" class="alert alert-danger">Name is required</div>
+        <div class="form-group">
+          <label for="rok_wydania">Rok Wydania </label>
+          <input type="number" [(ngModel)]="book.rok_wydania" 
+            class="form-control" 
+            id="rok_wydania" 
+            name="rok_wydania" 
+            placeholder="Enter publish age"
+            required #rok_wydania="ngModel">
+          <div [hidden]="!rok_wydania.pristine" class="alert alert-danger">The year of publication is required</div>
+        </div>
+        <div class="form-group">
+          <label for="bookshopID">Bookshop ID</label>
+          <input
+            type="text"
+            [(ngModel)]="book.bookshopId"
+            class="form-control"
+            id="bookshopID"
+            name="bookshopID"
+            placeholder="Enter bookshop ID"
+            required
+            #bookshopId="ngModel">
+          <div [hidden]="!bookshopId.pristine" class="alert alert-danger">Bookshop ID is requireD</div>
+        </div>
+        <button type="submit" [disabled]="!bookForm.form.valid" 
+          class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>
+  

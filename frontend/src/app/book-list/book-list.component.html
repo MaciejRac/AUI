@@ -1,0 +1,24 @@
+<p>book-list works!</p>
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">ID</th>
+            <th scope="col">Nazwa</th>
+            <th scope="col">rok_wydania</th>
+            <th scope="col">bookshop</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of books">
+            <td>{{ book.id }}</td>
+            <td>{{ book.nazwa }}</td>
+            <td>{{ book.rok_wydania }}</td>
+            <td>{{ book.bookshopId }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
