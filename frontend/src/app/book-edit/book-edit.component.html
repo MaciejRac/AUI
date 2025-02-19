@@ -4,7 +4,7 @@
       <form (ngSubmit)="onSubmit()" #bookForm="ngForm">
         <div class="form-group">
 
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="name">Book ID</label>
             <input type="text" [(ngModel)]="id" 
               class="form-control" 
@@ -12,8 +12,8 @@
               name="bookID" 
               placeholder="Enter Bookshop ID"
               required #bookID="ngModel">
-          </div>
-          <div [hidden]="!bookID.pristine" class="alert alert-danger">Book Id is required</div>
+          </div>  
+          <div [hidden]="!bookID.pristine" class="alert alert-danger">Book Id is required</div> -->
           
 
           <label for="name">Name</label>
@@ -46,7 +46,7 @@
             placeholder="Enter bookshop ID"
             required
             #bookshopId="ngModel">
-          <div [hidden]="!bookshopId.pristine" class="alert alert-danger">Bookshop ID is requireD</div>
+          <div [hidden]="!bookshopId.pristine" class="alert alert-danger">Bookshop ID is required</div>
         </div>
         <button type="submit" [disabled]="!bookForm.form.valid" 
           class="btn btn-info">Submit</button>

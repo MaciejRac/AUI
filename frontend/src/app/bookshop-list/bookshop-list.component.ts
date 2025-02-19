@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Bookshop } from '../models/bookshop';
 import { BookshopService } from '../service/bookshop-service.service';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bookshop-list',
@@ -12,7 +13,11 @@ import { CommonModule } from '@angular/common';
 export class BookshopListComponent {
  bookshops: Bookshop[]=[];
 
-  constructor(private bookshopService: BookshopService) {
+  constructor(private bookshopService: BookshopService, private router:Router) {
+  }
+
+  editBookshop(bookshopId: string): void {
+    this.router.navigate(['/editBookshop', bookshopId]);
   }
 
   ngOnInit() {

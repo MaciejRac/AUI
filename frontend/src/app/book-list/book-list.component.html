@@ -17,6 +17,9 @@
             <td>{{ book.nazwa }}</td>
             <td>{{ book.rok_wydania }}</td>
             <td>{{ book.bookshopId }}</td>
+            <td>
+              <button class="btn btn-primary btn-sm" (click)="editBook(book.id!)">Edit</button>
+            </td>
           </tr>
         </tbody>
       </table>

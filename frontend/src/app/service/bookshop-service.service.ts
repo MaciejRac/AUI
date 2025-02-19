@@ -24,6 +24,6 @@ export class BookshopService {
   }
   
   public editBookshop(id: string, bookshop: Bookshop): Observable<Bookshop> {
-      return this.http.put<Bookshop>(`${this.gatewayURL}/booksshops/${id}`, bookshop);
+      return this.http.put<Bookshop>(`${this.gatewayURL}/bookshops/${id}`, bookshop);
     }
 }

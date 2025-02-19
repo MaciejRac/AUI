@@ -12,9 +12,11 @@ export const routes: Routes = [
   { path: 'books', component: BookListComponent },
    { path: 'addbook', component: BookFormComponent }
    ,{path:'bookshops',component:BookshopListComponent}
-   ,{path:'addbookshop',component:BookshopFormComponent}
-   ,{path:'editBook', component:BookEditComponent}
-   ,{path:'editBookshop',component:BookshopEditComponent}
+   ,{path:'addbookshop',component:BookshopFormComponent},
+   //,{path:'editBook', component:BookEditComponent}
+   //,{path:'editBookshop',component:BookshopEditComponent},
+   {path:'editBook/:id',component:BookEditComponent},
+   {path:'editBookshop/:id',component:BookshopEditComponent}
    ,{ path: '', redirectTo: '/bookshops', pathMatch: 'full' } // Przekierowanie do "/books"
   // ,{ path: '**', redirectTo: '/books' }
   ];

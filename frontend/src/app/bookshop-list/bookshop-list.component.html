@@ -15,6 +15,9 @@
             <td>{{ bookshop.id }}</td>
             <td>{{ bookshop.nazwa }}</td>
             <td>{{ bookshop.liczba_pracownikow }}</td>
+            <td>
+              <button class="btn btn-primary btn-sm" (click)="editBookshop(bookshop.id!)">Edit</button>
+            </td>
           </tr>
         </tbody>
       </table>

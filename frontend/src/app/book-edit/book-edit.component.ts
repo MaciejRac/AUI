@@ -11,20 +11,31 @@ import { RouterModule } from '@angular/router';
   templateUrl: './book-edit.component.html',
   styleUrl: './book-edit.component.css'
 })
-export class BookEditComponent {
+export class BookEditComponent implements OnInit{
   book:Book;
-  id: string='';
+
+  bookId: string | null = null;
   constructor(
     private route: ActivatedRoute,
        private router: Router,
           private bookService: BookService) {
     this.book = new Book();
   }
+  ngOnInit(): void {
+    this.bookId = this.route.snapshot.paramMap.get('id');
+    console.log('Edit for book ID:', this.bookId);
 
+  }
   onSubmit() {
-    this.bookService.editBook(this.id,this.book).subscribe(result => this.gotoBookList());
-}
-
+    if (this.bookId) {
+        this.bookService.editBook(this.bookId, this.book).subscribe({
+            next: () => this.gotoBookList(),
+            error: err => console.error('Błąd podczas edycji książki:', err)
+        });
+    } else {
+        console.error('ID książki jest nieprawidłowe!');
+    }
+  }
   
   gotoBookList() {
     this.router.navigate(['/books']);

@@ -3,6 +3,7 @@ import { Book } from '../models/book';
 import { BookService } from '../service/book-service.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-book-list',
@@ -13,7 +14,11 @@ import { RouterModule } from '@angular/router';
 export class BookListComponent implements OnInit{
   books: Book[]=[];
 
-  constructor(private bookService: BookService) {
+  constructor(private bookService: BookService,private router:Router) {
+  }
+
+  editBook(bookId: string): void {
+    this.router.navigate(['/editBook', bookId]);
   }
 
   ngOnInit() {
