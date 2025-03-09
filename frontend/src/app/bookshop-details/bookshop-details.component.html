@@ -1,4 +1,3 @@
-<p>bookshop-list works!</p>
 <div class="card my-5">
     <div class="card-body">
       <table class="table table-bordered table-striped">
@@ -11,14 +10,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let bookshop of bookshops">
-            <td><a [routerLink]="['/bookshops', bookshop.id]">{{ bookshop.id }}</a></td>
-            <td>{{ bookshop.nazwa }}</td>
-            <td>{{ bookshop.liczbaPracownikow }}</td>
-            <td>
-              <button class="btn btn-primary btn-sm" (click)="editBookshop(bookshop.id!)">Edit</button>
-            </td>
-          </tr>
+            <tr>
+                <td>{{ bookshop.id }}</td>
+                <td>{{ bookshop.nazwa }}</td>
+                <td>{{ bookshop.liczbaPracownikow }}</td>
+            </tr>
         </tbody>
       </table>
     </div>

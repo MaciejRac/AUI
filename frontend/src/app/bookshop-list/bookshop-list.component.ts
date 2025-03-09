@@ -3,10 +3,11 @@ import { Bookshop } from '../models/bookshop';
 import { BookshopService } from '../service/bookshop-service.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-bookshop-list',
-  imports: [CommonModule],
+  imports: [CommonModule,RouterModule],
   templateUrl: './bookshop-list.component.html',
   styleUrl: './bookshop-list.component.css'
 })

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BookshopListComponent } from './bookshop-list/bookshop-list.component';
 import { BookshopFormComponent } from './bookshop-form/bookshop-form.component';
 import { BookEditComponent } from './book-edit/book-edit.component';
+import { BookshopDetailsComponent } from './bookshop-details/bookshop-details.component';
 import { BookshopEditComponent } from './bookshop-edit/bookshop-edit.component';
 
 export const routes: Routes = [
@@ -13,7 +14,7 @@ export const routes: Routes = [
    { path: 'addbook', component: BookFormComponent }
    ,{path:'bookshops',component:BookshopListComponent}
    ,{path:'addbookshop',component:BookshopFormComponent},
-   //,{path:'editBook', component:BookEditComponent}
+   {path:'bookshops/:id', component:BookshopDetailsComponent},
    //,{path:'editBookshop',component:BookshopEditComponent},
    {path:'editBook/:id',component:BookEditComponent},
    {path:'editBookshop/:id',component:BookshopEditComponent}

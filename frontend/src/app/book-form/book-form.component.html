@@ -28,7 +28,7 @@
             required #rok_wydania="ngModel">
           <div [hidden]="!rok_wydania.pristine" class="alert alert-danger">The year of publication is required</div>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="bookshopID">Bookshop ID</label>
           <input
             type="text"
@@ -40,6 +40,22 @@
             required
             #bookshopId="ngModel">
           <div [hidden]="!bookshopId.pristine" class="alert alert-danger">Bookshop ID is requireD</div>
+        </div> -->
+        <!-- zmieniam na liste dostepnych ksiegarni z wpisywania-->
+        <div class="form-group">
+          <label for="bookshopID">Bookshop</label>
+          <select
+            [(ngModel)]="book.bookshopId"
+            class="form-control"
+            id="bookshopID"
+            name="bookshopID"
+            required
+            #bookshopId="ngModel">
+            <option *ngFor="let bookshop of bookshops" [value]="bookshop.id">{{ bookshop.nazwa }}</option>
+          </select>
+          <div *ngIf="bookshopId.errors?.['required'] && bookshopId.touched" class="alert alert-danger">
+            Bookshop is required
+          </div>
         </div>
         <button type="submit" [disabled]="!bookForm.form.valid" 
           class="btn btn-info">Submit</button>
