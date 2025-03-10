@@ -8,6 +8,7 @@ import { BookshopFormComponent } from './bookshop-form/bookshop-form.component';
 import { BookEditComponent } from './book-edit/book-edit.component';
 import { BookshopDetailsComponent } from './bookshop-details/bookshop-details.component';
 import { BookshopEditComponent } from './bookshop-edit/bookshop-edit.component';
+import { BookDetailsComponent } from './book-details/book-details.component';
 
 export const routes: Routes = [
   { path: 'books', component: BookListComponent },
@@ -15,7 +16,7 @@ export const routes: Routes = [
    ,{path:'bookshops',component:BookshopListComponent}
    ,{path:'addbookshop',component:BookshopFormComponent},
    {path:'bookshops/:id', component:BookshopDetailsComponent},
-   //,{path:'editBookshop',component:BookshopEditComponent},
+   {path:'books/:id',component:BookDetailsComponent},
    {path:'editBook/:id',component:BookEditComponent},
    {path:'editBookshop/:id',component:BookshopEditComponent}
    ,{ path: '', redirectTo: '/bookshops', pathMatch: 'full' } // Przekierowanie do "/books"

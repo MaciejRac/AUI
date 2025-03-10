@@ -7,14 +7,12 @@
             <th scope="col">#</th>
             <th scope="col"> [ID]</th>
             <th scope="col"> [Nazwa]</th>
-            <th scope="col"> [Liczba Pracownikow]</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let bookshop of bookshops">
             <td><a [routerLink]="['/bookshops', bookshop.id]">{{ bookshop.id }}</a></td>
             <td>{{ bookshop.nazwa }}</td>
-            <td>{{ bookshop.liczbaPracownikow }}</td>
             <td>
               <button class="btn btn-primary btn-sm" (click)="editBookshop(bookshop.id!)">Edit</button>
             </td>

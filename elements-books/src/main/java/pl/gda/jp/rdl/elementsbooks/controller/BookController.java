@@ -61,7 +61,7 @@ public class BookController {
     public ResponseEntity<BookDTO> getBook(@PathVariable UUID id) {
         Book book = bookService.findBookById(id);
         if (book == null) return ResponseEntity.notFound().build();
-        BookDTO bookDTO = new BookDTO( book.getNazwa(), book.getRok_wydania(), book.getKsiegarnia().getNazwa());
+        BookDTO bookDTO = new BookDTO( book.getId(),book.getNazwa(), book.getRok_wydania(), book.getKsiegarnia().getNazwa());
         return ResponseEntity.ok(bookDTO);
     }
     @GetMapping

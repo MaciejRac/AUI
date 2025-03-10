@@ -45,15 +45,15 @@
         <div class="form-group">
           <label for="bookshopID">Bookshop</label>
           <select
-            [(ngModel)]="book.bookshopId"
+            [(ngModel)]="book.ksiegarnia"
             class="form-control"
-            id="bookshopID"
-            name="bookshopID"
+            id="bookshop"
+            name="bookshop"
             required
-            #bookshopId="ngModel">
+            #bookshop="ngModel">
             <option *ngFor="let bookshop of bookshops" [value]="bookshop.id">{{ bookshop.nazwa }}</option>
           </select>
-          <div *ngIf="bookshopId.errors?.['required'] && bookshopId.touched" class="alert alert-danger">
+          <div *ngIf="bookshop.errors?.['required'] && bookshop.touched" class="alert alert-danger">
             Bookshop is required
           </div>
         </div>

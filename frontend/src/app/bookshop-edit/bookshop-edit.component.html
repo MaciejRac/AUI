@@ -1,4 +1,3 @@
-<p>bookshop-edit works!</p>
 <div class="card my-5">
     <div class="card-body">
       <form (ngSubmit)="onSubmit()" #editBookshopForm="ngForm">
@@ -26,15 +25,15 @@
         <div [hidden]="!nazwa.pristine" class="alert alert-danger">Nazwa jest wymagana</div>
 
         <div class="form-group">
-          <label for="liczba_pracownikow">Liczba Pracownikow </label>
-          <input type="number" [(ngModel)]="bookshop.liczba_pracownikow" 
+          <label for="liczbaPracownikow">Liczba Pracownikow </label>
+          <input type="number" [(ngModel)]="bookshop.liczbaPracownikow" 
             class="form-control" 
-            id="liczba_pracownikow" 
-            name="liczba_pracownikow" 
+            id="liczbaPracownikow" 
+            name="liczbaPracownikow" 
             placeholder="Enter publish age"
-            required #liczba_pracownikow="ngModel">
+            required #liczbaPracownikow="ngModel">
           </div>
-          <div [hidden]="!liczba_pracownikow.pristine" class="alert alert-danger">Liczba pracownikow jest wymagana</div>
+          <div [hidden]="!liczbaPracownikow.pristine" class="alert alert-danger">Liczba pracownikow jest wymagana</div>
         
         <button type="submit" [disabled]="!editBookshopForm.form.valid" 
           class="btn btn-info">Submit</button>

@@ -6,15 +6,16 @@
             <th scope="col">#</th>
             <th scope="col">ID</th>
             <th scope="col">Nazwa</th>
+            <th scope="col">rok_wydania</th>
+            <th scope="col">bookshop</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let book of books">
-            <td><a [routerLink]="['/books', book.id]">{{ book.id }}</a></td>
+          <tr>
+            <td>{{ book.id }}</td>
             <td>{{ book.nazwa }}</td>
-            <td>
-              <button class="btn btn-primary btn-sm" (click)="editBook(book.id!)">Edit</button>
-            </td>
+            <td>{{ book.rok_wydania }}</td>
+            <td>{{ book.ksiegarnia }}</td>
           </tr>
         </tbody>
       </table>
