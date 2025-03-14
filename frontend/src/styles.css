@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+ul.text-center.list-inline.py-3{
+    background: #A28865;
+    color: black;
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin-left: 0px;
+    list-style-position: inside;
+    border-radius: 20px;
+}
+ul.text-center.list-inline.py-3 li.list-inline-item{
+    border: 2px solid black; /* Obramowanie */
+    border-radius: 50px;
+    /*color: white;*/
+}
